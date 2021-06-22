@@ -1,3 +1,3 @@
 -- Pergunta 6
--- Qual a evolução das avaliações das temporadas?
-Select Season, Episode, Title, Release_date, Rating, Writer_1, Director from data;
+-- Qual a média de avaliações dos episódios por temporada?
+select distinct season as Temporada, avg(rating) as Média from data group by season;
